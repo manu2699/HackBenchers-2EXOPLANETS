@@ -1,0 +1,18 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "Hacker Benchers #2 EXO PLANET",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "VISHAL TK, MANU VK",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dom-parser": "^0.1.5",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "html-element": "^2.2.0"
+  }
+}

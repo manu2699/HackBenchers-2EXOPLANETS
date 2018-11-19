@@ -1,0 +1,75 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <tile>EXO-PLANETS</tile>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            background-image: url('https://lh3.googleusercontent.com/7HQy0bSmLvr5vDVGfCep3jMOkRBYz5vwTZXzNZ0DG7z0IINq4i-mT2GzCuPoG4uzNXpO5HpRsGguAR6Vx1BscCaoTU2bDbnWL4Q-5K_f2o6TreWOEZEl7c0mQ88nFU45J1N_4_jFpcrziCLYT9iqo-mwwsj01PCfJJhZ2cYtOl-dW96pQo6Eqr3X3ndDmL9IPja6I1-dU9gW4vbr-K9aCTXmu8oqNY4A_rbQPKAeoD7ABKITB1Igz8HIBhn9v4yuEFxnScG1RXYuxjFvtp-UAGzXj-xGf76qgXOd1EHh4VWaO90pzbFwxIM31oh4e8EHlkdypPnE2dkg67OOCXRtHPdoZ1W2JfHXJjjtFi91tOjjiPPrWmL6EHsIzxMxc-qYpXpIo_ZI6EFDIrWZwTxPdDYl_rgRbFbldxE0JrEl6eqt_4OtifI6Lp7GMaDVcq-ZdKEbwhRVpmzrnsmDkC4dA8bUDFGFMvQ34HJJTce3a-3lojoAdWdCQ6TQ_SJGYEwwhX6ErJzTMukyECFFjLyjVrqmO6Lt4LYdIvhJDDJ0CZHTeyucHw_UPog3iIsr8GKj_3nzKuhfFLRWY6XeFi19M_SD4vy82qXZDXeG24y-3r-7dnKnzqwLLbo60773w4m0bQXIkoJwWM-f8SgKkDioJo4-=w1024-h577-no');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .grid {
+            margin: 1000px auto 100px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-gap: 20px;
+        }
+        .grid .card {
+            position: relative;
+            width: 350px;
+            margin: 0 auto;
+            background: black;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, .5);
+            overflow: hidden;
+        }
+        .grid .card .layer {
+            position: absolute;
+            top: calc(100% - 5px);
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(#290a59, #ff7c00);
+            z-index: 1;
+            transition: 0.5s;
+        }
+        .grid .card:hover .layer {
+            top: 0;
+        }
+        .grid .card .content {
+            position: relative;
+            z-index: 2;
+            font-size: 18px;
+            line-height: 24px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="ref" class="grid">
+        <% for(var i=0; i < ex.length; i++ ) { %>
+        <div class="card">
+            <div class="layer"></div>
+            <div class="content">
+                <p>
+                    <%= ex[i].PlanetIdentifier %><br>
+                    <%= ex[i].ListsPlanetIsOn %><br>
+                    <%= ex[i].DiscoveryMethod %><br>
+                    <%= ex[i].TypeFlag %><br>
+                </p>
+            </div>
+        </div>
+        <% } %>
+    </div>
+</body>
+</html>
